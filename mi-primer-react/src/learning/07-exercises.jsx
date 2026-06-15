@@ -119,8 +119,44 @@ export function CardPost({ titulo, autor, fecha, estado }) {
 //    - Si posts está vacío, muestra "No hay posts en esta sección"
 //    - Si hay posts, renderiza un CardPost por cada uno con key correcta
 
-// 4. En App.jsx:
-//    - Crea un array de al menos 5 posts con datos variados
-//      (algunos sin autor, algunos con contenido largo, distintos estados)
-//    - Usa ListaPosts dos veces: una con posts publicados y otra con borradores
-//    - Filtra el array con .filter() para pasarle solo los correspondientes
+// ─────────────────────────────────────
+// BLOQUE 1: CardPost
+// Es la "tarjeta" que muestra UN solo post
+// Recibe un objeto post con sus datos adentro
+// ─────────────────────────────────────
+export function CardPost2({ post }) {
+  return (
+    <article>
+      <h3>{post.titulo}</h3>
+      <p>Autor: {post.autor}</p>
+    </article>
+  );
+}
+
+// ─────────────────────────────────────
+// BLOQUE 2: ListaPosts
+// Es la "lista" que muestra VARIOS posts
+// Recibe dos props:
+//   - titulo: el nombre de la sección
+//   - posts: el array con todos los posts
+// ─────────────────────────────────────
+export function ListaPosts({ posts, titulo }) {
+  // Si el array está vacío, muestra un mensaje y para aquí
+  // Es como un guardia que avisa "no hay nada que mostrar"
+  if (posts.length === 0) {
+    return <p>No hay posts en esta sección</p>;
+  }
+
+  // Si hay posts, muestra el título y recorre el array
+  // .map() es como una fotocopiadora: por cada post crea una CardPost
+  return (
+    <div>
+      <h2>{titulo}</h2>
+      {posts.map((post) => (
+        <CardPost2 key={post.id} post={post} />
+        // key={post.id} le dice a React cómo identificar cada tarjeta
+        // sin esto React se confunde cuando la lista cambia
+      ))}
+    </div>
+  );
+}
