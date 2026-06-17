@@ -60,3 +60,11 @@ function FormularioPost() {
     </form>
   );
 }
+
+// JS puro que hacías antes          React con useState
+// ─────────────────────────────     ──────────────────────────────
+// let posts = []                    const [posts, setPosts] = useState([])
+// posts.push(nuevoPost)             setPosts([...posts, nuevoPost])
+// renderizarPosts(posts)            React re-renderiza automáticamente
+// document.querySelector('#input')  value={input} onChange={setInput}
+// .value
