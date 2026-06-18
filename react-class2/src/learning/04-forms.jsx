@@ -7,7 +7,9 @@
 // Para leer el valor necesitas ref o querySelector — no es el patrón React
 
 // Input CONTROLADO — React maneja el valor
-function InputControlado() {
+import { useState } from "react";
+
+export function InputControlado() {
   const [valor, setValor] = useState("");
 
   return (
@@ -20,7 +22,7 @@ function InputControlado() {
 }
 // ¿Por qué formularios controlados?
 
-function FormularioLogin() {
+export function FormularioLogin() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 

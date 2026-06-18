@@ -1,6 +1,7 @@
 //Estado con arrays — agregar y eliminar elementos
+import { useState } from "react";
 
-function ListaTareas() {
+export function ListaTareas() {
   const [tareas, setTareas] = useState([
     { id: 1, texto: "Aprender React", completada: false },
     { id: 2, texto: "Hacer ejercicio", completada: true },

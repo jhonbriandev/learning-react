@@ -16,14 +16,13 @@
 
 /*-----------------------------------------------------------------------------*/
 
-import { MiComponente } from "./learning/03-rules-use-state.jsx";
+import { FormularioPost } from "./learning/07-exercises.jsx";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <MiComponente />
-      <p>Este contador suma pero no lo muestra.</p>
+      <FormularioPost />
     </>
   );
 }
