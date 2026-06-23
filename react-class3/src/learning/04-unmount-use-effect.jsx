@@ -31,7 +31,7 @@ useEffect(() => {
 // el componente se desmonta. Sin cleanup, el fetch termina
 // e intenta actualizar el estado de un componente que ya no existe.
 // React lanza un warning y puede causar memory leaks.
-jsx; // Ejemplo 2 — limpiar un intervalo
+// Ejemplo 2 — limpiar un intervalo
 useEffect(() => {
   const intervalo = setInterval(() => {
     console.log("Tick cada segundo");
