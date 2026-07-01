@@ -41,3 +41,19 @@ useEffect(() => {
     clearInterval(intervalo); // limpia el intervalo al desmontar
   };
 }, []);
+
+// 1. React monta el componente (primera vez)
+//    → useEffect corre
+//    → se crea controller #1
+//    → empieza fetch #1 (pidiendo datos al servidor)
+
+// 2. React decide desmontar el componente (esto es automático en Strict Mode, solo para probar)
+//    → se ejecuta la función de limpieza: controller #1.abort()
+//    → fetch #1 queda CANCELADO (nunca va a completar su respuesta)
+
+// 3. React vuelve a montar el componente (segunda vez, la que se queda)
+//    → useEffect corre OTRA VEZ
+//    → se crea controller #2 (uno nuevo, distinto al anterior)
+//    → empieza fetch #2
+
+// 4. fetch #2 termina exitosamente → se guardan los datos → esto es lo que ves en pantalla
