@@ -1,0 +1,24 @@
+// ESTO SE DESARROLLA EN SRC
+
+// Aplica las optimizaciones a tu proyecto de posts:
+
+// 1. Envuelve CardPost con memo
+//    Agrega un console.log dentro del componente
+//    Verifica que al escribir en el buscador, el log
+//    NO aparece para los posts que no cambiaron
+
+// 2. Envuelve manejarEliminar y manejarEditar con useCallback
+//    en Posts.jsx
+
+// 3. Aplica useMemo al filtrado de posts
+//    Agrega al menos dos filtros: por texto y por estado
+
+// 4. Usa useRef para:
+//    - Enfocar el input de búsqueda automáticamente al cargar la página
+//    - Guardar el ID del último post eliminado (sin causar re-render)
+//      y mostrarlo en consola
+
+// 5. Verifica en consola que:
+//    - Al escribir en el buscador, CardPost solo re-renderiza
+//      si el post específico cambia
+//    - Al cambiar el filtro de estado, solo se recalcula postsFiltrados

@@ -8,7 +8,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<MyPosts />} />
-      <Route path="/my-posts/:slug" element={<PostDetail />} />
+        <Route path="/my-posts/:slug" element={<PostDetail />} />
       <Route path="/login" element={<Login />} />
       <Route path="/categories" element={<Categories />} />
     </Routes>
