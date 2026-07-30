@@ -6,7 +6,7 @@ import { CategoriesProvider } from "./context/CategoriesContext.jsx";
 import "./index.css";
 import App from "./App.jsx";
 import { ToastProvider } from "./context/ToastContext.jsx";
-
+// comentario
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>

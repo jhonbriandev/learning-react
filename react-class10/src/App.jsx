@@ -1,7 +1,9 @@
 import { Routes, Route } from "react-router-dom";
-import { MyPosts } from "./learning/MyPost";
-import { Login } from "./learning/Login";
-import { ErrorBoundary } from "./learning/ErrorBoundary";
+import { Login } from "./pages/Login";
+import ErrorBoundary from "./error/ErrorBoundary";
+import { FormPost } from "./pages/FormPost";
+import { MyPost } from "./pages/MyPost";
+import "./index.css";
 
 //PARA PROBAR EL APRENDIZAJE
 
@@ -12,7 +14,15 @@ function App() {
         path="/"
         element={
           <ErrorBoundary>
-            <MyPosts />
+            <MyPost />
+          </ErrorBoundary>
+        }
+      />
+      <Route
+        path="/create"
+        element={
+          <ErrorBoundary>
+            <FormPost />
           </ErrorBoundary>
         }
       />
