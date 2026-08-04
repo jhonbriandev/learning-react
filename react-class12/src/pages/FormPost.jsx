@@ -11,6 +11,7 @@ import { useForm } from "react-hook-form";
 import { useAuth } from "../context/AuthContext"; // (B) nuestro contexto de autenticación
 import { useCategories } from "../context/CategoriesContext"; // (C) contexto que ya trae las categorías desde la API
 import { postsService } from "../services/postsService";
+import { Boton } from "../components/ui/Boton";
 
 // NUEVO: valores reutilizables cuando el formulario se usa en modo "crear".
 // Tenerlos en una constante evita repetir el mismo objeto en varios lugares.
@@ -181,13 +182,13 @@ export function FormPost({ post = null, onSubmit, onCancelar }) {
           visual que tenías en tu versión anterior. */}
       <div className="form-acciones">
         {/* NUEVO: el mismo botón sirve para crear o editar */}
-        <button type="submit">{post ? "Actualizar Post" : "Crear Post"}</button>
+        <Boton type="submit">{post ? "Actualizar Post" : "Crear Post"}</Boton>
 
         {/* NUEVO: botón cancelar (solo si MyPost lo envía) */}
         {onCancelar && (
-          <button type="button" onClick={onCancelar}>
+          <Boton type="button" onClick={onCancelar}>
             Cancelar
-          </button>
+          </Boton>
         )}
       </div>
 

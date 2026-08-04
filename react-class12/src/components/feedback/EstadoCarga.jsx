@@ -1,4 +1,3 @@
-// src/components/feedback/EstadoCarga.jsx
 function EstadoCarga({ mensaje = "Cargando..." }) {
   return (
     <div className="estado-carga">

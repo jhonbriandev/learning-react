@@ -2,6 +2,7 @@
 import { useForm } from "react-hook-form";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate, useLocation, Link } from "react-router-dom";
+import { Boton } from "../components/ui/Boton";
 
 export function Login() {
   // login: función que probablemente viene de tu AuthContext y que
@@ -116,13 +117,13 @@ export function Login() {
           )}
         </div>
 
-        <button
+        <Boton
           type="submit"
           disabled={isSubmitting} // evita doble envío mientras se espera la respuesta
           className="btn btn-primario"
         >
           {isSubmitting ? "Ingresando..." : "Ingresar"}
-        </button>
+        </Boton>
       </form>
 
       <p>

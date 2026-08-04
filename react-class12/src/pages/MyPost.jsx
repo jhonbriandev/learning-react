@@ -5,6 +5,7 @@ import { postsService } from "../services/postsService";
 import { FeedbackEstado } from "../components/feedback/FeedbackEstado";
 import { CardPost } from "../components/posts/CardPost";
 import { FormPost } from "./FormPost";
+import { Boton } from "../components/ui/Boton";
 import "../index.css";
 
 export function MyPost() {
@@ -81,9 +82,7 @@ export function MyPost() {
         <h1>Posts</h1>
 
         {estaAutenticado && (
-          <button onClick={() => setModoFormulario("crear")}>
-            + Nuevo post
-          </button>
+          <Boton onClick={() => setModoFormulario("crear")}>+ Nuevo post</Boton>
         )}
       </div>
 

@@ -1,6 +1,7 @@
 // src/pages/Registro.jsx
 import { useForm } from "react-hook-form";
 import { useNavigate, Link } from "react-router-dom";
+import { Boton } from "../components/ui/Boton";
 
 export function Register() {
   // useNavigate: hook de react-router-dom para redirigir al usuario
@@ -158,9 +159,9 @@ export function Register() {
         {/* (C) isSubmitting: true automáticamente mientras onSubmit
             está corriendo (o sea, mientras esperamos la respuesta del fetch).
             Se usa para deshabilitar el botón y evitar doble-clic/doble-envío. */}
-        <button type="submit" disabled={isSubmitting}>
+        <Boton type="submit" disabled={isSubmitting}>
           {isSubmitting ? "Registrando..." : "Crear cuenta"}
-        </button>
+        </Boton>
       </form>
 
       <p>

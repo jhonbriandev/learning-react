@@ -1,4 +1,3 @@
-// src/components/feedback/Toast.jsx
 import { useState, useEffect } from "react";
 
 export function Toast({

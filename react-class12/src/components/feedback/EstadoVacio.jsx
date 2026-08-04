@@ -1,4 +1,3 @@
-// src/components/feedback/EstadoVacio.jsx
 function EstadoVacio({ mensaje, accion, textoAccion }) {
   return (
     <div className="estado-vacio">

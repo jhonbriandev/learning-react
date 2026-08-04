@@ -1,5 +1,6 @@
 import { memo } from "react";
 import { Link } from "react-router-dom";
+import { Boton } from "../ui/Boton";
 
 export const CardPost = memo(function CardPost({
   post,
@@ -18,8 +19,8 @@ export const CardPost = memo(function CardPost({
         <Link to={`/posts/${post.slug}`}>Ver más</Link>
         {puedeEditar && (
           <>
-            <button onClick={() => onEditar(post)}>Editar</button>
-            <button onClick={() => onEliminar(post.slug)}>Eliminar</button>
+            <Boton onClick={() => onEditar(post)}>Editar</Boton>
+            <Boton onClick={() => onEliminar(post.slug)}>Eliminar</Boton>
           </>
         )}
       </div>

@@ -1,4 +1,3 @@
-// src/components/feedback/EstadoError.jsx
 function EstadoError({ mensaje, onReintentar }) {
   return (
     <div className="estado-error">

@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useForm } from "../../hooks/useForm";
 import { useCategories } from "../../context/CategoriesContext";
+import { Boton } from "../ui/Boton";
 
 // Valores por defecto cuando el formulario se usa para CREAR un post nuevo.
 // Si estuviéramos editando, estos valores se sobreescriben con el post real
@@ -124,13 +125,13 @@ export function FormPost({
 
       {/* --- BLOQUE 9: botones de acción --- */}
       <div className="form-acciones">
-        <button type="submit" disabled={enviando}>
+        <Boton type="submit" disabled={enviando}>
           {enviando ? "Guardando..." : postInicial ? "Actualizar" : "Crear"}
-        </button>
+        </Boton>
         {onCancelar && (
-          <button type="button" onClick={onCancelar}>
+          <Boton type="button" onClick={onCancelar}>
             Cancelar
-          </button>
+          </Boton>
         )}
       </div>
     </form>
